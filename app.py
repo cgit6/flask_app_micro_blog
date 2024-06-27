@@ -47,13 +47,13 @@ def create_app():
 
     @app.route("/md")
     def index():
-        return render_template('md.html')
+        return render_template("md.html")
 
-    # @app.route('/entry', methods=['POST'])
-    # def add_entry():
-    #     content = request.form['content']
-    #     # 在這裡處理你的表單數據，例如將其保存到數據庫中
-    #     return redirect(url_for('app'))
+    @app.route('/entry', methods=['POST'])
+    def add_entry():
+        content = request.form['content']
+        # 在這裡處理你的表單數據，例如將其保存到數據庫中
+        return redirect(url_for('app'))
 
     return app
 
