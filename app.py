@@ -45,6 +45,7 @@ def create_app():
         ]
         return render_template("app.html", entries = entries_with_date)
 
+    # 試著建立 markdown 頁面
     @app.route("/md")
     def index():
         return render_template("md.html")
